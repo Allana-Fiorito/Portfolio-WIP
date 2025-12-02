@@ -6,6 +6,8 @@
     <title>Allana Fiorito - Portfólio - CONTATO</title>
     <link rel="stylesheet" href="portfolio.css">
 </head>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 <body>
     <header>
         <nav class="headerNav">
@@ -17,7 +19,7 @@
         </nav>
     </header>
     <main class="main3">
-        <form action="" method="post">
+        <form action="https://formspree.io/f/xnnevbpr" method="post">
             <fieldset>
                 <!--Título do formulário-->
                 <legend><strong>Entre em contato!</strong></legend>
@@ -34,10 +36,18 @@
                 <!--Assunto-->
                 <label for="assuntoId">*Assunto</label>
                 <input type="text" name="assunto" id="assuntoId" size="50" maxlength="100" required>
+                <!--Mensagem-->
                 <label for="mensagemId">*Mensagem</label>
                 <textarea name="mensagem" id="mensagemId" style="resize: none" cols="59" rows="10"></textarea>
-                <!--Mensagem-->
+                <div class="botoes">
+                    <button type="submit" class="btnEnviar">Enviar</buttonclass=>
+                    <button type="reset" class="btnLimpar">Limpar</buttonclass=>
+                </div>
             </fieldset>
+            <!--Scripts das máscaras-->
+            <script>
+                $('#phoneId').mask('(00) 00000-0000');
+            </script>
         </form>
     </main>
     <footer>
